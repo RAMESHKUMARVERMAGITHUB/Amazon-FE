@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: amazon-deployment
 spec:
-  replicas: 1  # Number of desired replicas
+  replicas: 2  # Number of desired replicas
   selector:
     matchLabels:
       app: amazon
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: amazon
-        image: patelajay745/amazon:latest
+        image: rameshkumarverma/amazon:latest
         ports:
         - containerPort: 3000
